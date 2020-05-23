@@ -5,6 +5,8 @@ Creating this repo to keep track of my resume and to make it easily editable. In
 
 Feel free to fork and change as per your skillset.
 
+[View my Resume here](https://app.box.com/s/3w35eqrjz31tzp1azomifs1sq2m2jhvb)
+
 # My toolset (VS Code editor)
 1. I personally prefer `BasicTex` on Mac OS. Download [BasicTeX](http://tug.org/mactex/morepackages.html), or use `brew cask install basictex`. You can read more about BasicTex in [BasicTeX (pdf)](http://pages.uoregon.edu/koch/BasicTeX.pdf).
 2. To manage LaTeX packages, I personally prefer GUI based `tex-live-utility`. You may find CLI tool `tlmgr` cumbersome to use, in that case install GUI for tlmgr - TeX Live Utility - `brew cask install tex-live-utility`.
