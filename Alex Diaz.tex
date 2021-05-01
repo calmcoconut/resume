@@ -1,0 +1,139 @@
+\documentclass[letterpaper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \usepackage{fontawesome}
+    \usepackage{hyperref}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{garamondlibre}
+
+\begin{document}
+\vspace*{-50pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-12pt}
+\begin{center}
+	{\Huge \scshape {Alex Diaz}}\\
+	\vspace{1mm}
+	\faMapMarker \hspace{.5mm} Tokyo, Japan $\cdot$ 
+	\faEnvelope \hspace{.5mm} \href{mailto:diaz.alejandro772@gmail.com}{diaz.alejandro772@gmail.com} $\cdot$ \faMobile \hspace{.5mm} +81 080-7266-8529
+		
+	\faGithub \hspace{.5mm} \href{https://github.com/calmcoconut}{GitHub} $\cdot$
+	\faLinkedin \hspace{.5mm} \href{https://www.linkedin.com/in/diazjalejandro/}{LinkedIn} $\cdot$
+	\faTwitter \hspace{.5mm} \href{https://twitter.com/greetingsfriend}{Twitter} $\cdot$
+    \faBriefcase \hspace{.5mm} \href{https://calmcoconut.github.io/Alejandro-Diaz-Portfolio/}{My website}
+    \\
+\end{center}
+
+%==== Education ====%
+\header{EDUCATION}
+\textbf{PSG College of Technology \textbar{} Anna University}\hfill Coimbatore, India\\
+B.Sc Information Technology \textit{CGPA: 9.43/ 10} \hfill Jun 2009 - May 2012\\
+\vspace*{12pt}
+
+%==== Experience ====%
+\header{WORK EXPERIENCE}
+\vspace{1mm}
+
+\textbf{Agoda [Booking Holdings Inc.,]} \hfill Bangkok, Thailand\\
+\textit{Data Engineer \textbar{} Data platform team} \hfill Jan 2020 | Present\\
+\vspace{-1.5mm}
+\begin{itemize} \setlength\itemsep{-0.3em}
+    \item hello
+\end{itemize}
+
+
+\begin{figure}[b]
+\header{SKILLS}
+\begin{tabular}{ l l}
+	Programming languages:  & Python, Scala, Java
+	\\
+	BigData toolset:        & Hadoop ecosystem (CDH \& Ambari), Spark, Sqoop, Hive,
+	\\
+	                        & Impala, Airflow, Oozie, RedShift, Jupyter notebooks,
+	\\
+	                        & Postgres, MongoDB, Elastic Search, AWS S3, Ceph
+	\\
+	Application monitoring: & Grafana, Kibana, Sensu, Vault, AWS Cloudwatch, NewRelic
+	\\
+	DevOps:                 & TeamCity, Jenkins, Kubernetes, Docker , Amazon web services
+    \\\\
+\end{tabular}
+\end{figure}
+\vspace{12mm}
+
+%==== Independent projects ====%
+% \header{INDEPENDENT PROJECTS}
+% {\textbf{SoapUI Plugin}} {\sl Groovy, Java, Gradle} \hfill https://github.com/Kondasamy/soapui-plugin-file-export\\
+% Automated test reports and logs generator for SoapUI and Ready API test runs.\\
+% \vspace*{2mm}
+% {\textbf{Automated Code Coverage}} {\sl VS Instrumentation, Jenkins} \\
+% CI framework to execute automated code coverage for .Net (C\#) projects and report generation.\\
+% \vspace*{2mm}
+
+
+\end{document}
