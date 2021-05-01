@@ -7,15 +7,99 @@
     \usepackage[T1]{fontenc}
     \usepackage[margin=1in]{geometry}
     \usepackage{fontawesome}
-    \usepackage{hyperref}
-    \textheight=10in
+    \usepackage{etoolbox}
+    \usepackage{booktabs}
+    \usepackage{array}
+
+    \usepackage{latexsym}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{verbatim}
+    \usepackage{enumitem}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \input{glyphtounicode}
+    \textheight=11in
     \pagestyle{empty}
     \raggedright
 
-%\renewcommand{\encodingdefault}{cg}
-%\renewcommand{\rmdefault}{lgrcmr}
+% page format commands %
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % Define a new right-aligned column type
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Define a new left-aligned (no justification) column type
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new centred column type
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -70,11 +154,10 @@
 \usepackage{garamondlibre}
 
 \begin{document}
-\vspace*{-50pt}
 
     
 
-%==== Profile ====%
+%==== HEADER ====%
 \vspace*{-12pt}
 \begin{center}
 	{\Huge \scshape {Alex Diaz}}\\
@@ -89,41 +172,77 @@
     \\
 \end{center}
 
+
 %==== Education ====%
-\header{EDUCATION}
-\textbf{PSG College of Technology \textbar{} Anna University}\hfill Coimbatore, India\\
-B.Sc Information Technology \textit{CGPA: 9.43/ 10} \hfill Jun 2009 - May 2012\\
-\vspace*{12pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Computer Science}{Jan. 2021 -- May 2024}
+    \resumeSubheading
+      {The University of Georgia}{Athens, GA}
+      {Bachelor of Arts in Computer Science, Minor in History}{Aug. 2013 -- May 2017}
+ \resumeSubHeadingListEnd
 
-%==== Experience ====%
-\header{WORK EXPERIENCE}
-\vspace{1mm}
+ %-----------EXPERIENCE-----------
+\section{Experience}
 
-\textbf{Agoda [Booking Holdings Inc.,]} \hfill Bangkok, Thailand\\
-\textit{Data Engineer \textbar{} Data platform team} \hfill Jan 2020 | Present\\
-\vspace{-1.5mm}
-\begin{itemize} \setlength\itemsep{-0.3em}
-    \item hello
-\end{itemize}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Data Analyst Supervisor}{Nov. 2018 -- Nov. 2019}
+    {United Parcel Service (UPS)}{Sandy Springs, GA}
+    \resumeItemListStart
+      \resumeItem{Wrangled sales data from SQL server and created reports and \textbf{dashboards} for executive leadership to act upon using SQL and PowerBI to automate essential regular data}
+      \resumeItem{Coordinated with other teams to automate existing reports. Reduced team size requirement from 7 to 5 by automating reports using \textbf{Python}}
+      \resumeItem{Led documentation efforts to prepare a structured, reliable instruction set for our team as well as other teams}
+      \resumeItem{Built automation projects as requested on an ad-hoc basis using \textbf{Python} and \textbf{Microsoft VBA}}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Data Analyst volunteer}{July 2018 -- Sept. 2018}
+    {Bredesen for Tennessee Senate}{Nashville, TN remote}
+    \resumeItemListStart
+      \resumeItem{Created data visualizations to impact voter turnout with \textbf{Tableau}}
+      \resumeItem{Generated weekly reports using \textbf{SQL, Excel pivot tables, } and \textbf{VBA macros}; provided \textbf{metric reporting}}
+      \resumeItem{Presented analytical data to multiple teams, demonstrating analytical data to add value to on-the-ground efforts}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Inventory Coordinator}{June 2017 -- Oct. 2017}
+    {Veritiv Corporation}{Norcross, GA}
+    \resumeItemListStart
+      \resumeItem{Created VBA Macro reducing supply-chain errors by 70\%, earning the \textbf{Veritiv Parachute Award} as a result}
+      \resumeItem{Managed \textbf{ad-hoc} models to analyze and manage inventory levels to reduce inventory costs and improve turnover}
+      \resumeItem{Worked and coordinated with internal teams, customers, and freight to deliver on-time orders to customers}
+      \resumeItem{Generated reports weekly using data-retrieval, v-lookup, Pivot tables, and macros. Provided metric reporting}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
 
 
-\begin{figure}[b]
-\header{SKILLS}
-\begin{tabular}{ l l}
-	Programming languages:  & Python, Scala, Java
-	\\
-	BigData toolset:        & Hadoop ecosystem (CDH \& Ambari), Spark, Sqoop, Hive,
-	\\
-	                        & Impala, Airflow, Oozie, RedShift, Jupyter notebooks,
-	\\
-	                        & Postgres, MongoDB, Elastic Search, AWS S3, Ceph
-	\\
-	Application monitoring: & Grafana, Kibana, Sensu, Vault, AWS Cloudwatch, NewRelic
-	\\
-	DevOps:                 & TeamCity, Jenkins, Kubernetes, Docker , Amazon web services
-    \\\\
-\end{tabular}
-\end{figure}
+\section{Technical Skills}
+\vspace{-6pt}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{L{0.2\linewidth} L{0.6\linewidth}}
+        \textbf{Languages} & C++/C, Java, Kotlin, Python, SQL \\
+        \textbf{Libraries, Frameworks} & Django, Android, \\
+        \textbf{Notable checkpoints} & CFA Level I Exam, Ethics, statistics, and finance
+    \end{tabular}
+\end{table}
 \vspace{12mm}
 
 %==== Independent projects ====%
