@@ -1,10 +1,12 @@
-\documentclass[letterpaper]{article}
+\documentclass[12pt, letterpaper]{article}
+\usepackage[ebgaramond]{fontsetup}
+    % \usepackage[lining,semibold,scaled=1.05]{ebgaramond} % font
+    \usepackage[T1]{fontenc}
     \usepackage{fullpage}
     \usepackage{amsmath}
     \usepackage{amssymb}
     \usepackage{textcomp}
     \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
     \usepackage[margin=1in]{geometry}
     \usepackage{fontawesome}
     \usepackage{etoolbox}
@@ -17,6 +19,7 @@
     \usepackage[usenames,dvipsnames]{color}
     \usepackage{verbatim}
     \usepackage{enumitem}
+    \usepackage{amssymb}
     \usepackage[hidelinks]{hyperref}
     \usepackage{fancyhdr}
     \usepackage[english]{babel}
@@ -24,6 +27,7 @@
     \textheight=11in
     \pagestyle{empty}
     \raggedright
+
 
 % page format commands %
 
@@ -95,7 +99,7 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\blacksquare$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -184,7 +188,7 @@
       {Master of Science in Computer Science}{Jan. 2021 -- May 2024}
     \resumeSubheading
       {The University of Georgia}{Athens, GA}
-      {Bachelor of Arts in Computer Science, Minor in History}{Aug. 2013 -- May 2017}
+      {Bachelor of Arts in Economics, Minor in History}{Aug. 2013 -- May 2017}
  \resumeSubHeadingListEnd
 
  %-----------EXPERIENCE-----------
@@ -192,19 +196,28 @@
 
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Data Analyst Supervisor}{Nov. 2018 -- Nov. 2019}
-    {United Parcel Service (UPS)}{Sandy Springs, GA}
-    \resumeItemListStart
-      \resumeItem{Wrangled sales data from SQL server and created reports and \textbf{dashboards} for executive leadership to act upon using SQL and PowerBI to automate essential regular data}
-      \resumeItem{Coordinated with other teams to automate existing reports. Reduced team size requirement from 7 to 5 by automating reports using \textbf{Python}}
-      \resumeItem{Led documentation efforts to prepare a structured, reliable instruction set for our team as well as other teams}
-      \resumeItem{Built automation projects as requested on an ad-hoc basis using \textbf{Python} and \textbf{Microsoft VBA}}
+    {Software Engineering Tutor}{Jan 2021 -- Present}
+    {FDS Services}{Tokyo, Japan}
+    \resumeItemListStart[topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{0cm},after=\vspace{1mm}] % added option to save space
+      \resumeItem{Teaching students engineering practices and fundamentals of \textbf{Java}, \textbf{Python}, MIT Scratch, and \textbf{OO} design}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Data Analyst volunteer}{July 2018 -- Sept. 2018}
+    {Data Analyst Manager}{Nov 2018 -- Nov 2019}
+    {United Parcel Service (UPS)}{Sandy Springs, GA}
+    \resumeItemListStart
+      \resumeItem{Assembled and developed automated data reporting for executive leadership in US sales territories with \textbf{SQL}, \textbf{Python's Pandas}, and \textbf{Power BI}}
+      \resumeItem{Led inter-team coordination to automate reporting practices. Reduced daily reporting workloads from 3 hours to 3 minutes by automating reports using Python and Microsoft \textbf{VBA} with \textbf{SQL} database}
+      \resumeItem{Implemented SQL server database jobs to minimizing manual maintenance and reporting requirements}
+      \resumeItem{Addressed production bugs and made improvements in existing inter-team reporting in \textbf{Python}, \textbf{VBA}, and \textbf{SQL}. Eliminated consistent negative feedback logs for in-production reports}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Data Analyst Volunteer}{July 2018 -- Sept 2018}
     {Bredesen for Tennessee Senate}{Nashville, TN remote}
     \resumeItemListStart
       \resumeItem{Created data visualizations to impact voter turnout with \textbf{Tableau}}
@@ -213,17 +226,6 @@
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Inventory Coordinator}{June 2017 -- Oct. 2017}
-    {Veritiv Corporation}{Norcross, GA}
-    \resumeItemListStart
-      \resumeItem{Created VBA Macro reducing supply-chain errors by 70\%, earning the \textbf{Veritiv Parachute Award} as a result}
-      \resumeItem{Managed \textbf{ad-hoc} models to analyze and manage inventory levels to reduce inventory costs and improve turnover}
-      \resumeItem{Worked and coordinated with internal teams, customers, and freight to deliver on-time orders to customers}
-      \resumeItem{Generated reports weekly using data-retrieval, v-lookup, Pivot tables, and macros. Provided metric reporting}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
 
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -235,27 +237,14 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
+%==== Independent projects ====%
+\section{Projects}
+\textbf{Raven's Progressive Matrices (RPM) AI agent}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item hello
+\end{itemize}
+
 
 \section{Technical Skills}
-\vspace{-6pt}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{L{0.2\linewidth} @{\hspace{2cm}} L{0.6\linewidth}}
-        \textbf{Languages} & C++/C, Java, Kotlin, Python, SQL \\
-        \textbf{Libraries, Frameworks} & Django, Android, \\
-        \textbf{Notables} & CFA Level I Exam, Ethics, statistics, and finance. Agile development
-    \end{tabular}
-\end{table}
-\vspace{12mm}
-
-%==== Independent projects ====%
-% \header{INDEPENDENT PROJECTS}
-% {\textbf{SoapUI Plugin}} {\sl Groovy, Java, Gradle} \hfill https://github.com/Kondasamy/soapui-plugin-file-export\\
-% Automated test reports and logs generator for SoapUI and Ready API test runs.\\
-% \vspace*{2mm}
-% {\textbf{Automated Code Coverage}} {\sl VS Instrumentation, Jenkins} \\
-% CI framework to execute automated code coverage for .Net (C\#) projects and report generation.\\
-% \vspace*{2mm}
-
 
 \end{document}
