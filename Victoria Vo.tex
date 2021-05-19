@@ -1,0 +1,274 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[ebgaramond]{fontsetup}
+    % \usepackage[lining,semibold,scaled=1.05]{ebgaramond} % font
+    \usepackage[T1]{fontenc}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[margin=1in]{geometry}
+    \usepackage{fontawesome}
+    \usepackage{etoolbox}
+    \usepackage{booktabs}
+    \usepackage{array}
+
+    \usepackage{booktabs}
+    \usepackage{graphicx}
+
+    \usepackage{latexsym}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{verbatim}
+    \usepackage{enumitem}
+    \usepackage{amssymb}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \input{glyphtounicode}
+    \textheight=11in
+    \pagestyle{empty}
+    \raggedright
+
+
+% page format commands %
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% column space
+\setlength{\tabcolsep}{52pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % Define a new right-aligned column type
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Define a new left-aligned (no justification) column type
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new centred column type
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\blacksquare$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}} %[topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{0cm},after=\vspace{1mm}] % added option to save space
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-16pt}}
+
+%-------------------------------------------
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{garamondlibre}
+
+\begin{document}
+
+    
+
+%==== HEADER ====%
+\vspace*{-12pt}
+\begin{center}
+	{\Huge \scshape {Victoria Vo}}\\
+	\vspace{1mm}
+	\faMapMarker \hspace{.5mm} Tokyo, Japan $\cdot$ 
+	\faEnvelope \hspace{.5mm} \href{mailto:victoriabhvo@gmail.com}{victoriabhvo@gmail.com} $\cdot$ \faMobile \hspace{.5mm} +81 080-2378-0492
+	% \faLinkedin \hspace{.5mm} \href{https://www.linkedin.com/in/diazjalejandro/}{LinkedIn} $\cdot$
+    \\
+\end{center}
+
+
+%==== Education ====%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Georgia}{Athens, GA}
+      {B.A. in Economics, B.A. in Political Science, B.A. in International Affairs}{Aug. 2014 -- May 2018}
+ \resumeSubHeadingListEnd
+
+ %-----------EXPERIENCE-----------
+\section{Experience}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Eikaiwa Teacher}{Feb 2020 - Present}
+    {Sesame Street English}{Tokyo, Japan}
+    \resumeItemListStart
+      \resumeItem{Facilitated \textbf{training} and \textbf{collaboration} with new hires with live sales and lesson demonstrations}
+      \resumeItem{Organized and managed scheduling for cohesive team coverage}
+      \resumeItem{\textbf{Presented} and \textbf{closed} on contacts for new customers \textit{(students, B2B)}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+  {Manager}{Jan 2018 - Jan 2020}
+  {Pairs Nail Spa}{Atlanta, Georgia}
+   \resumeItemListStart
+      \resumeItem{Prepared and balanced supply budget; Amplified yearly cost savings by an average of 4\% after delivering improved rates}
+      \resumeItem{Trained, managed, and scheduled technicians, creating detailed schedules and adjusting as needed}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Data Analyst Volunteer}{Feb 2018 -- Nov 2018}
+    {Phil Bredesen for Tennessee Senate}{Remote--- Nashville, Tennessee}
+    \resumeItemListStart
+      \resumeItem{Co-authored custom Tableau interface to target areas of interst}
+      \resumeItem{contacted over 70 registered and unregistered voters per day, generating voter turn-out}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%adding some space%
+\vspace{2pt}
+
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+\section{Skills}
+\setlength{\tabcolsep}{2em}
+\begin{table}[h!]
+    \centering
+    \resizebox{.9\textwidth}{!}{%
+    \begin{tabular}{@{}ll@{}}
+    \begin{tabular}[c]{@{}l@{}}\textbf{Public Speaking, Communication}--- Cultivate \\ team cohesion with leadership and values\end{tabular} &
+
+     \begin{tabular}[c]{@{}l@{}}\textbf{Budgeting \& Reporting}--- Managing projects costs and \\ weekly reporting to leadership\end{tabular} \\
+
+    \begin{tabular}[c]{@{}l@{}}\textbf{Communication \& Presentations}–-- Inform \\and persuade target audiences through presentations \end{tabular} &
+
+     \begin{tabular}[c]{@{}l@{}}\textbf{CRM Platforms}--- Certified and comfortable with Salesforce\\ CRM. Familiar with HubSpot CRM\end{tabular} \\
+
+    \begin{tabular}[c]{@{}l@{}}\textbf{Presentations}--- Expertise in variety of \\presentation solutions: PowerPoint and Tableau \end{tabular} &
+
+      \begin{tabular}[c]{@{}l@{}}\textbf{Project Management}--- Manage and assign Trello \\ board responsibilities\end{tabular} \\
+
+    \begin{tabular}[c]{@{}l@{}}\textbf{Language}--- Vietnamese: Native, Bilingual \\\hspace{67pt}English: Bilingual Efficiency\end{tabular} &
+      \begin{tabular}[c]{@{}l@{}}\textbf{Prioritization}--- Manage inter-team responsibilities \\with agreed values and team objectives\end{tabular} \\
+    \end{tabular}%
+    }
+    \end{table}
+%-------------------------------------------
+
+\section{Projects}
+\textbf{white pages} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+\end{itemize}
+\textbf{Do Enterprise Zones (EZ) Really Decrease Unemployment?} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+\end{itemize}
+
+\end{document}
