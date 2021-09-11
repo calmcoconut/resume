@@ -1,4 +1,4 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[12pt, a4paper]{article}
 \usepackage[ebgaramond]{fontsetup}
     % \usepackage[lining,semibold,scaled=1.05]{ebgaramond} % font
     \usepackage[T1]{fontenc}
@@ -99,11 +99,11 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\blacksquare$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}} %[topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{0cm},after=\vspace{1mm}] % added option to save space
+\newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep]} %[topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{0cm},after=\vspace{1mm}] % added option to save space
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-16pt}}
 
 %-------------------------------------------
@@ -175,7 +175,7 @@
 	\faGithub \hspace{.5mm} \href{https://github.com/calmcoconut}{GitHub} $\cdot$
 	\faLinkedin \hspace{.5mm} \href{https://www.linkedin.com/in/diazjalejandro/}{LinkedIn} $\cdot$
 	\faTwitter \hspace{.5mm} \href{https://twitter.com/greetingsfriend}{Twitter} $\cdot$
-    \faBriefcase \hspace{.5mm} \href{https://calmcoconut.github.io/diasDiaz/}{My website}
+    \faBriefcase \hspace{.5mm} \href{https://calmcoconut.github.io/diasDiaz/}{Diasdiaz}
     \\
 \end{center}
 
@@ -185,21 +185,50 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science}{Jan. 2021 -- May 2024}
+      {Master of Science in Computer Science \textbf{GPA 4.0 / 4.0}}{Jan. 2021 -- May 2024}
     \resumeSubheading
       {The University of Georgia}{Athens, GA}
       {Bachelor of Arts in Economics, Minor in History}{Aug. 2013 -- May 2017}
  \resumeSubHeadingListEnd
+
+%==== Independent projects ====%
+\section{Projects}
+\textbf{Multi-threaded Socket Program} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+  \item Demonstrated performance and problem-solving creativity comparable to a human test taker
+  \item Used \textbf{Computer Vision} algorithms via \textbf{OpenCV} and \textbf{NumPy}
+\end{itemize}
+
+\textbf{IQ AI agent} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+  \item Demonstrated performance and problem-solving creativity comparable to a human test taker
+  \item Used \textbf{Computer Vision} algorithms via \textbf{OpenCV} and \textbf{NumPy}
+\end{itemize}
+
+\textbf{TimeTime} Android Application | \small\textit{Java, Jetpack, Android Material, Room DB, Java Thread}
+\\ \href{https://github.com/calmcoconut/TimeTime}{\textit{github.com/calmcoconut/TimeTime}}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Created a time logging Android Application following a MVC design pattern supported by Android's Room persistent database design
+\end{itemize}
+
+\textbf{Spotify Music Advisor} | \small\textit{Java, Spring, HTTP, OAuth2, JSON}
+\\ \href{https://github.com/calmcoconut/Music_Advisor_spotify_api}{\textit{github.com/calmcoconut/Music\_Advisor\_spotify\_api}}
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item Implemented a RESTful server capable of OAuth handshake and authentication with Spotify
+\end{itemize}
+
 
  %-----------EXPERIENCE-----------
 \section{Experience}
 
 \resumeSubHeadingListStart
   \resumeSubheading
-    {Software Engineering Tutor}{Feb 2020 -- Present}
-    {FDS Services}{Tokyo, Japan}
+    {Software Engineer Tutor}{Feb 2020 -- Present}
+    {Tokyo Coding Club \& FDS Services}{Tokyo, Japan}
     \resumeItemListStart
-      \resumeItem{Teaching students engineering practices and fundamentals of \textbf{Java}, \textbf{Python}, MIT Scratch, and \textbf{OO} design}
+      \resumeItem{Teaching students on software engineering practices and the fundamentals of \textbf{Python} and \textbf{OO} design.}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -208,23 +237,14 @@
     {Data Analyst Manager}{Nov 2018 -- Nov 2019}
     {United Parcel Service (UPS)}{Sandy Springs, GA}
     \resumeItemListStart
-      \resumeItem{Assembled and developed automated data reporting for executive leadership in US sales Vice President and President with \textbf{SQL}, \textbf{Python's Pandas}, and \textbf{Power BI}}
-      \resumeItem{Oversaw inter-team coordination to automate reporting practices. Reduced daily reporting workloads from 3 hours to 3 minutes by automating reports using Python and Microsoft \textbf{VBA} with \textbf{SQL} database}
-      \resumeItem{Implemented SQL server database jobs to minimizing manual maintenance and reporting requirements}
-      \resumeItem{Addressed production bugs and made improvements in existing inter-team reporting in \textbf{Python}, \textbf{VBA}, and \textbf{SQL}}
+      \resumeItem{Migrated my team's reporting stack to an automated workflow.}
+      \resumeItem{Created dashboards to analyze and aggregate metrics in my division; led to the automation of reports.}
+      \resumeItem{Implemented automated reporting applications by designing SQL database workflows to feed more than 10,000 data entries into VBA and Python applications.}
+      \resumeItem{Led and coordinated inter-team reporting, streamlining other teams' workflows; Reduced average reporting workload from 3 hours to 3 minutes using applications I wrote in Python (Pandas, SQLite).}
+      \resumeItem{Developed software and mentored peers on three teams using Python, MSQL, and VBA.}
+      \resumeItem{Finalists in the UPS upstart startup program--- coordinated with a multi-national team to present how encryption technology could impact UPS. Member of the UPS mentorship program.}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
-
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Data Analyst Volunteer}{July 2018 -- Sept 2018}
-    {Bredesen for Tennessee Senate}{Nashville, TN remote}
-    \resumeItemListStart
-      \resumeItem{Created data visualizations to impact voter turnout with \textbf{Tableau}}
-      \resumeItem{Generated weekly reports using \textbf{SQL, Excel pivot tables,} and \textbf{VBA macros}; provided \textbf{metric reporting}}
-      \resumeItem{Presented analytical data to multiple teams, demonstrating analytical data to add value to on-the-ground efforts}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
 
 %adding some space%
 \vspace{2pt}
@@ -240,29 +260,11 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
-%==== Independent projects ====%
-\section{Projects}
-\textbf{IQ AI agent} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
-  \item Demonstrated performance and problem-solving creativity comparable to a human test taker
-  \item Used \textbf{Computer Vision} algorithms via \textbf{OpenCV} and \textbf{NumPy}
-\end{itemize}
-
-\textbf{TimeTime} Android Application | \small\textit{Java, Kotlin, Android Jetpack, Android Material, Room DB, Java Thread}
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item Created a time logging Android Application following a MVC design pattern supported by Android's Room persistent database design
-\end{itemize}
-
-\textbf{Spotify Music Advisor} | \small\textit{Java, Spring, HTTP, OAuth2, JSON}
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item Implemented a RESTful server capable of OAuth handshake and authentication with Spotify
-\end{itemize}
 
 \section{Technical Skills}
-\textbf{Languages:} Java, Kotlin, Python, C++/C, Golang, SQL, HTML/CSS, Bash \\
-\textbf{Frameworks} \& \textbf{Libraries:} Spring, JUnit, Guava, Flask, Android, NumPy, Pandas, OpenCV \\
-\textbf{Dev Tools:} Git, Agile (scrum), Google Cloud, AWS, VIM, Docker, Linux \\
-\textbf{Misc:} Test-driven development, PASSED---CFA LV 1, Human Computer Interaction and Design
+\textbf{Languages:} Java, Kotlin, Python, C, C++, Go, SQL, VBA, HTML/CSS, Bash \\
+\textbf{Frameworks} \& \textbf{Libraries:} Spring, JUnit, Gradle, Flask, Android, NumPy, Pandas, OpenCV \\
+\textbf{Dev Tools:} Git, Agile, Google Cloud, AWS, VIM, Docker, Make, Linux \\
+\textbf{Misc:} Test-driven development, PASSED---CFA LV 1, API design, systems design, software architecture, equities \& derivatives
 
 \end{document}
