@@ -1,0 +1,54 @@
+\documentclass{cover}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+%___ COMPANY VARIABLE
+\newcommand{\company}{Hennge \space}
+% ____
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+%     TITLE NAME
+\vfill
+\vfill
+\namesection{Alex}{Diaz}{ \urlstyle{same}\href{mailto:alejandrojsdiaz@outlook.com}{alejandrojsdiaz@outlook.com} |  
+6783151715 | \urlstyle{same}\href{https://github.com/calmcoconut}{Github} | \urlstyle{same}\href{https://www.linkedin.com/in/diazjalejandro/}{Linkedin}
+}
+
+\hfill
+
+\begin{minipage}[t]{0.5\textwidth} 
+\companyname{\textbf{\company}}
+\vspace{1.5cm}
+\end{minipage}
+\begin{minipage}[t]{0.49\textwidth} 
+\currentdate{\today}
+\end{minipage}
+%%%%%%
+
+\lettercontent{Dear Recruiter,}
+
+\lettercontent{I am a developer making a career change from data analytics to software engineering. I realized I enjoyed building and maintaining applications that used data more than presenting the analytics. My recent academic and professional results showcase my passion for solving problems with code.}
+
+   
+\lettercontent{Currently, I tutor students of all ages. I must use clear and concise language to teach everything from basic OO programming to constructing and manipulating data structures. I have been recognized repeatedly while earning my master's in computer science. For example, Professor Joyner at GA Tech recognized my AI program as an exemplary project.}
+
+\lettercontent{I am a passionate, life-long learner. I have applied to fulfill the role at \company because I believe \company is full of the most intelligent people in the industry. I hope to grow and continue to contribute to my team. To further illustrate my fit for your team, contact me at \href{alejandrojsdiaz@outlook.com}{alejandrojsdiaz@outlook.com}.}
+
+\lettercontent{Thank you for your time and consideration.}
+\lettercontent{Sincerely,}
+\vspace{0.5cm}
+
+\includegraphics[width=0.35\textwidth,left]{signature.png}
+
+\signature{Alex Diaz}
+
+\end{document}  
+\documentclass[]{article}

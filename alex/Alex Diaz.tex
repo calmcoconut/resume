@@ -1,0 +1,290 @@
+\documentclass[12pt, letter]{article}
+\usepackage[ebgaramond]{fontsetup}
+    % \usepackage[lining,semibold,scaled=1.05]{ebgaramond} % font
+    \usepackage[T1]{fontenc}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[margin=1in]{geometry}
+    \usepackage{fontawesome}
+    \usepackage{etoolbox}
+    \usepackage{booktabs}
+    \usepackage{array}
+
+    \usepackage{latexsym}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{verbatim}
+    \usepackage{enumitem}
+    \usepackage{amssymb}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \input{glyphtounicode}
+    \textheight=11in
+    \pagestyle{empty}
+    \raggedright
+
+
+% page format commands %
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% column space
+\setlength{\tabcolsep}{52pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % Define a new right-aligned column type
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Define a new left-aligned (no justification) column type
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new centred column type
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep]} %[topsep=0pt,itemsep=0pt,parsep=0pt,before=\vspace{0cm},after=\vspace{1mm}] % added option to save space
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-16pt}}
+
+%-------------------------------------------
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{garamondlibre}
+
+\begin{document}
+
+    
+
+%==== HEADER ====%
+\vspace*{-14pt}
+\begin{center}
+	{\Huge \scshape {Alex Diaz}}\\
+	\vspace{1mm}
+	\faMapMarker \hspace{.5mm} San Francisco, CA $\cdot$ 
+	\faEnvelope \hspace{.5mm} \href{mailto:alejandrojsdiaz@outlook.com}{alejandrojsdiaz@outlook.com} $\cdot$ \faMobile \hspace{.5mm} 678-315-1715
+		
+	\faGithub \hspace{.5mm} \href{https://github.com/calmcoconut}{GitHub} $\cdot$
+	\faLinkedin \hspace{.5mm} \href{https://www.linkedin.com/in/diazjalejandro/}{LinkedIn} $\cdot$
+	\faTwitter \hspace{.5mm} \href{https://twitter.com/greetingsfriend}{Twitter} $\cdot$
+    \faBriefcase \hspace{.5mm} \href{https://calmcoconut.github.io/diasDiaz/}{Diasdiaz}
+    \\
+\end{center}
+
+\vspace{-14pt}
+%==== Education ====%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Computer Science \textbf{GPA 4.0 / 4.0}}{Jan 2021 -- May 2023}
+    \resumeSubheading
+      {The University of Georgia}{Athens, GA}
+      {Bachelor of Arts in Economics, Minor in History}{Aug 2013 -- May 2017}
+ \resumeSubHeadingListEnd
+
+
+ %-----------EXPERIENCE-----------
+\section{Experience}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Google}{May 2022 -- August 2022}
+    {Software Engineer Intern}{Sunnyvale, California}
+    \resumeItemListStart
+      \resumeItem{Designed and implemented components of a client-facing (Photos, Lens, etc.) data acquisition system for machine learning models; Propagated data from other systems to a frontend with C++ and Angular.}
+      \resumeItem{Led the implementation of a new backend system and extended existing infrastructure for compatibility. Challenges included RPC compatibility, designing APIs, and a scalable database design.}
+      \resumeItem{Delivered a product with stakeholder input and graded by established metrics (e.g., scalability, integration).}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% \vspace{-4pt}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Tokyo Coding Club }{Jun 2021 -- May 2022}
+    {Software Engineer Tutor}{Tokyo, Japan}
+    \resumeItemListStart
+      \resumeItem{Teaching students software engineering with  Python and object oriented-design.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+% \vspace{-4pt}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {United Parcel Service (UPS)}{Nov 2018 -- Nov 2019}
+    {Data Analyst Manager}{Sandy Springs, Georgia}
+    \resumeItemListStart
+      \resumeItem{Implemented automated reporting applications by designing and rewriting SQL database tables to feed more than 500,000 data entries into VBA and Python applications.}
+      \resumeItem{Led and coordinated inter-team reporting, streamlining other teams' workflows; Reduced average reporting workload from 3 hours to 3 minutes using applications I wrote in Python (Pandas, SQLite).}
+      \resumeItem{Developed software and mentored peers on three teams using Python, Microsoft SQL Server, and VBA.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% \vspace{-24pt}
+%==== Independent projects ====%
+\section{Projects}
+
+\begin{itemize}
+  \item {\small \textbf{\textit{2021 -- Multi-threaded socket server and client} --} Programmed a high-performance multi-threaded server and client in C utilizing the Linux system call API and Sockets library. Demonstrated IPv4 / IPv6 interoperability and multi-threading management (C libraries).}
+  \item {\small \textbf{\textit{2021 -- AI Agent} --} Architected an AI agent based on Newell's SOAR to solve Raven's Progressive Matrices. I used computer vision (i.e., scale-invariant feature transformation (SIFT)) and human-like cognition algorithms to enable the agent to process IQ test images as problems; resulting in a success rate of 70\%. I implemented the agent in Python, using object-oriented computer programming, OpenCV, and NumPy. Written with meta-cognition facilities to better solve problems.}
+  \item {\small \textbf{\textit{2020 -- TimeTime} --}  Coded a Java Android application (Android Studio) that prompts users through their lock screen to log their daily activities. The application uses a model-view-controller pattern to provide users an infinite scrolling list and enable interactions with good performance and a beautiful UI / UX created with Jetpack. My architecture allowed for local persistent data (RoomDB) and concurrency.}
+\end{itemize}
+
+% \item {\small \textbf{\textit{2019 - Spotify Music Advisor} --} Engineered a Java application using the Spring boot framework, capable of REST API communication with Spotify. I implemented the application to use OAuth. Enables users to query playlists.}
+% \textbf{Multi-threaded Socket Program} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+% \begin{itemize}[noitemsep,topsep=0pt]
+%   \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+%   \item Demonstrated performance and problem-solving creativity comparable to a human test taker
+%   \item Used \textbf{Computer Vision} algorithms via \textbf{OpenCV} and \textbf{NumPy}
+% \end{itemize}
+
+% \textbf{IQ AI agent} | \small\textit{Python, NumPy, PIL, Docker, OpenCV}
+% \begin{itemize}[noitemsep,topsep=0pt]
+%   \item Undertook implementing an AI that solves the Raven's Progressive Matrix IQ
+%   \item Demonstrated performance and problem-solving creativity comparable to a human test taker
+%   \item Used \textbf{Computer Vision} algorithms via \textbf{OpenCV} and \textbf{NumPy}
+% \end{itemize}
+
+% \textbf{TimeTime} Android Application | \small\textit{Java, Jetpack, Android Material, Room DB, Java Thread}
+% \\ \href{https://github.com/calmcoconut/TimeTime}{\textit{github.com/calmcoconut/TimeTime}}
+% \begin{itemize}[noitemsep,topsep=0pt]
+%   \item Created a time logging Android Application following a MVC design pattern supported by Android's Room persistent database design
+% \end{itemize}
+
+% \textbf{Spotify Music Advisor} | \small\textit{Java, Spring, HTTP, OAuth2, JSON}
+% \\ \href{https://github.com/calmcoconut/Music_Advisor_spotify_api}{\textit{github.com/calmcoconut/Music\_Advisor\_spotify\_api}}
+% \begin{itemize}[noitemsep,topsep=0pt]
+%   \item Implemented a RESTful server capable of OAuth handshake and authentication with Spotify
+% \end{itemize}
+
+%adding some space%
+\vspace{-24pt}
+
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+\section{Technical Skills}
+{\small
+\textbf{Languages:} Java, C++, Python, Go, SQL, TypeScript, Angular, VBA, HTML/CSS, Bash, SQL \\
+% \textbf{Frameworks} \& \textbf{Libraries:} Spring, JUnit, Gradle, Flask, Android, NumPy, Pandas, OpenCV, Swing, Tkinter \\
+\textbf{Tools:} Git, Blaze, Agile, Cloud, Distributed systems, VIM, Docker, Make, Linux, unit testing, CFA LV 1, Larry David
+}
+
+\end{document}
